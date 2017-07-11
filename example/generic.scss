@@ -1,0 +1,89 @@
+@import 'generic-color.scss';
+
+/* ==========================================================================
+   Color styles: generic
+   ========================================================================== */
+.generic {
+    /* Main background color */
+    background-color: $generic-background-color;
+
+    /* MDL-edits */
+    .mdl-layout__header { background-color: $generic-header-color; }
+
+    a { color: $generic-link-color; }
+
+    .sidemenu .mdl-navigation .mdl-navigation__link {
+        color: $generic-menu-link-color;
+        &:hover { background-color: $generic-menu-border-color; }
+    }
+    /* END MDL-edits */
+
+    .content { color: $generic-font-color; }
+
+    .comment {
+        border-top: 1px solid $generic-accent-color;
+    }
+
+    .game-frame footer {
+        border-top: 1px solid $generic-accent-color;
+
+        .votes { color: $generic-font-color; }
+    }
+
+    .game-tile {
+        .card-text,
+        span { color: $generic-font-color; }
+    }
+
+    .highscore {
+        border-top: 1px solid $generic-accent-color;
+    }
+
+    .highscore-top {
+        @media screen and (max-width: $small) {
+            border-top: 1px solid $generic-accent-color;
+        }
+    }
+
+    .iconmenu {
+        &:after { background-color: $generic-accent-color; }
+
+        &.open div.toggle-btn { background-color: darken($generic-accent-color, 10%); }
+
+        div { background: $generic-accent-color; }
+    }
+
+    .playcount {
+        color: $generic-font-color;
+        i { color: $generic-accent-color; }
+    }
+
+    // We can't overwrite sidemenu with just .generic .sidemenu
+    .sidemenu.left,
+    .sidemenu.right {
+        background: $generic-menu-background-color;
+        border-color: $generic-menu-border-color;
+
+        .sidemenu-section,
+        .title {
+            color: $generic-menu-font-color;
+            border-color: $generic-menu-border-color;
+        }
+
+        .switch { border-color: $generic-menu-border-color; }
+    }
+
+    .stars i {
+        color: $generic-accent2-color;
+    }
+
+    .tag {
+        background-color: $generic-accent-color;
+        i { background-color: darken($generic-accent-color, 10%); }
+    }
+
+    .tile {
+        background-color: $generic-tile-color;
+        .mdl-card { background-color: $generic-tile-color; }
+    }
+}
